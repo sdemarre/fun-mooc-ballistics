@@ -1,0 +1,47 @@
+\documentclass[10pt,xcolor=dvipsnames]{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Dresden}
+\title{imaxima - fun mooc - ballistics}
+\author{serge de marre}
+\date{\today}
+\begin{document}
+
+\newcommand{\ifracd}[2]{\frac{#1}{#2}}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ballistics - no friction}
+  \begin{itemize}
+  \item equations:
+$$\left[ \ifracd{d^2}{d\,t^2}\,x\left(t\right)=0 , \ifracd{d^2}{d\,t^2}\,z\left(t\right)=-g \right] $$
+  \item initial conditions:
+$$\left[ x\left(0\right)=0 ,  \left.\ifracd{d}{d\,t}\,x
+ \left(t\right)\right|_{t=0}=\cos \alpha\,v , z\left(0
+ \right)=0 , \left.\ifracd{d}{d\,t}\,z\left(t\right)
+ \right|_{t=0}=\sin \alpha\,v \right] $$
+  \item solution:
+$$\left[ x\left(t\right)=\cos \alpha\,t\,v , \linebreak[0]z\left(t
+ \right)=\sin \alpha\,t\,v-\ifracn{g\,t^2}{2} \right] $$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{graph for $\alpha \in [0,\pi]$}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Redefining maxima lisp functions}
+$$ x\left(t\right)=\cos \alpha\,t\,v \rightarrow \linebreak[0]t=\ifracd{x
+ }{\cos \alpha\,v} $$
+\end{frame}
+
+\end{document}
